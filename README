@@ -1,0 +1,38 @@
+/ (racine du projet)
+├── css/
+│   ├── style-light.css
+│   └── style-dark.css
+│
+├── js/
+│   ├── theme-toggle.js
+│   ├── form-validation.js
+│   ├── profile-inline-edit.js        ← AJAX mise à jour profil
+│   ├── admin-update.js               ← AJAX mise à jour admin
+│   ├── search-sort.js
+│   ├── personalization.js            ← chargement options + AJAX prix
+│   ├── dynamic-pricing.js            ← (vide, déporté dans personalization.js)
+│   └── cart.js
+│
+├── php/
+│   ├── config.php
+│   ├── scripts/
+│   │   ├── traitement_inscription.php
+│   │   ├── traitement_connexion.php
+│   │   ├── deconnexion.php
+│   │   └── traitement_paiement.php
+│   │
+│   └── ajax/
+│       ├── update_profile.php        ← reçoit {field,value} et renvoie JSON {success,…}
+│       ├── update_user_admin.php     ← reçoit {id,field,value} renvoie JSON
+│       ├── get_options.php           ← reçoit {stepId} renvoie JSON liste d’options
+│       └── calc_price.php            ← reçoit {voyageId,options...} renvoie JSON {total}
+│
+├── cart.php
+├── profil.php                        ← page profil dynamic
+├── admin.php                         ← page admin dynamic
+├── personnalisation.php              ← page personnalisation dynamic
+├── paiement.php                      ← page paiement (statique ou PHP)
+│
+└── index.html, inscription.html,
+    connexion.html, presentation.html,
+    recherche.html                    ← pages statiques inchangées
